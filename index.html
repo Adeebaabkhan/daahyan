@@ -392,7 +392,7 @@
 
         // Initialize default owner in Firebase
         function initializeDefaultUsers() {
-            getRef('users/maisetoi').once('value')
+            getRef('users/daahyan').once('value')
                 .then((snapshot) => {
                     if (!snapshot.exists()) {
                         // Create default owner account in Firebase INSIDE your app folder
@@ -405,7 +405,7 @@
                             profitPercent: 100,
                             createdDate: new Date().toISOString().split('T')[0]
                         };
-                        return getRef('users/maisetoi').set(defaultOwner);
+                        return getRef('users/daahyan').set(defaultOwner);
                     }
                 })
                 .then(() => {
